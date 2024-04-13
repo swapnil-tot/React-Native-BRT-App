@@ -1,5 +1,5 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import React from 'react';
+import React, {useEffect} from 'react';
 // import HomeScreen from '../Screens/HomeScreen';
 import SearchScreen from '../Screens/SearchScreen';
 import {ROUTES} from '../constants';
@@ -7,9 +7,18 @@ import BottomTabNavigator from './BottomTabNavigator';
 import SplashScreen from '../Screens/SplashScreen';
 import WebViewScreen from '../Screens/WebViewScreen';
 import BusRouteDetail from '../Screens/BusRouteDetail';
+import {Linking} from 'react-native';
 
 const Stack = createNativeStackNavigator();
 const Navigator = () => {
+  useEffect(() => {
+    checkURL();
+  }, []);
+
+  const checkURL = async () => {
+    let initialUrl = await Linking.getInitialURL();
+    console.log('initial url :: ', initialUrl);
+  };
   return (
     <Stack.Navigator
       initialRouteName={ROUTES.SPLASH}

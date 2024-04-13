@@ -37,6 +37,7 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = brt_design/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = brt_design/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-brt_design-brt_designTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-brt_design-brt_designTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD288C42BCA8C4300B4563C /* brt_design.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = brt_design.entitlements; path = brt_design/brt_design.entitlements; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-brt_design.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brt_design.debug.xcconfig"; path = "Target Support Files/Pods-brt_design/Pods-brt_design.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-brt_design.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brt_design.release.xcconfig"; path = "Target Support Files/Pods-brt_design/Pods-brt_design.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-brt_design-brt_designTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brt_design-brt_designTests.debug.xcconfig"; path = "Target Support Files/Pods-brt_design-brt_designTests/Pods-brt_design-brt_designTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +87,7 @@
 		13B07FAE1A68108700A75B9A /* brt_design */ = {
 			isa = PBXGroup;
 			children = (
+				3AD288C42BCA8C4300B4563C /* brt_design.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -485,10 +487,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = brt_design/brt_design.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2QSEB49F55;
+				DEVELOPMENT_TEAM = 5G6Q76UWAG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = brt_design/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "BRTS Search";
@@ -502,11 +505,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.flirtino;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brt-design";
 				PRODUCT_NAME = brt_design;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Flirtino_dev;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -519,10 +520,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = brt_design/brt_design.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2QSEB49F55;
+				DEVELOPMENT_TEAM = 5G6Q76UWAG;
 				INFOPLIST_FILE = brt_design/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "BRTS Search";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,11 +537,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.flirtino;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.brt-design";
 				PRODUCT_NAME = brt_design;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Flirtino_dev;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
