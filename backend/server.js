@@ -20,6 +20,11 @@ app.use("/api/", require("./routes/advertisementRoute"));
 
 // Serve the assetlinks.json file statically
 app.use("/.well-known", express.static(path.join(__dirname, ".well-known")));
+app.get("/.well-known/apple-app-site-association", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, ".well-known/apple-app-site-association.json")
+  );
+});
 
 app.use(errorHandler);
 app.listen(port, () => {
