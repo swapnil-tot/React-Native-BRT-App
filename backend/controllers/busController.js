@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const Bus = require("../models/busModel");
 const Station = require("../models/stationModel");
+const { paginatedResults } = require("../utils/paginationFunction");
 const ticketPrice = parseInt(process.env.ONE_STATION_PRICE, 10);
 const travelTime = parseInt(process.env.ONE_STATION_TRAVEL_TIME, 10);
 
@@ -198,6 +199,13 @@ const createStation = asyncHandler(async (req, res) => {
   res.status(201).json(bus);
 });
 
+//@desc get stations pagination
+//@route get /api/BRT/stations?page_size=3&page_number=1
+//@access public
+const getStationPagesList = asyncHandler(async (req, res) => {
+  res.status(200).json(res.paginatedResults);
+});
+
 module.exports = {
   getBusList,
   getBus,
@@ -207,4 +215,5 @@ module.exports = {
   getRouteBuses,
   getStationList,
   createStation,
+  getStationPagesList,
 };
